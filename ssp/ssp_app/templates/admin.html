@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block head %}Welcome {{ user }} {% endblock %}}
+
+{% block content %}
+    <a href="/create_user/">Create User</a>
+    <a href="/list_users/">List Users</a>
+    <br />
+    <a href="/loggedin/">Home</a>
+    <a href="/logout/"> Logout</a>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% block title %}Create User{% endblock %}
+{% block head %}
+ Creating User
+{% endblock %}
+{% block content %}
+<form method="post" action="/register/">
+		{% csrf_token %}
+		First Name: <input name='firstname' type='text' placeholder='first'/> <br/>
+        Last Name: <input name='lastname' type='text' placeholder='last'/> <br/>
+        Username: <input name='username' type='text' placeholder='username'/> <br/>
+        Create Password: <input name='password' type='password' /> <br/>
+		<input type='submit' value='Add User'/>
+	</form>
+<br />
+<a href="/loggedin/">Home</a>
+<a href="/logout/"> Logout</a>
+{% endblock %}
