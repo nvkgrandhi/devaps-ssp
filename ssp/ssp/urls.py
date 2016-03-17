@@ -1,4 +1,4 @@
-"""ssp URL Configuration
+"""demo_proj URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.9/topics/http/urls/
@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from ssp_app import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', views.home, name='home'),
+    url(r'^loggedin/', views.home_page, name='home_page'),
+    url(r'^login/', views.login, name='login'),
+    url(r'^create_user/', views.create_user, name='create_user'),
+    url(r'^register/', views.register, name='register'),
+    url(r'^logout/', views.logout, name='logout'),
 ]
