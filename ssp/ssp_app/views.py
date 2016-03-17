@@ -30,6 +30,9 @@ def login(request):
 def home_page(request):
     return render(request, 'admin.html',)
 
+def user_home(request):
+    return render(request, 'other_users.html')
+
 
 def create_user(request):
     return render(request, 'create_user.html')

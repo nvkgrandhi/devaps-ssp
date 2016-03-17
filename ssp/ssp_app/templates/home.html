@@ -1,11 +1,26 @@
 {% extends "base.html" %}
+{% load i18n %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
 {% block title %}Welcome Self Service Portal{% endblock %}
 {% block head %}DEVAPS SSP{% endblock %}
+
 {% block content %}
+
+
+
 <form method="post" action="/login/">
 		{% csrf_token %}
+
+
+
 		UserName: <input name='username' type='text' placeholder='enter username'/> <br/>
 		Password: <input name='password' type='password' placeholder='enter password'/><br/>
 		<input type='submit' value='LOGIN'/>
+
+
+
 	</form>
 {% endblock %}

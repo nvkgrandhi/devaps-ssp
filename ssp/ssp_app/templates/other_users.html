@@ -1,9 +1,14 @@
 {% extends "base.html" %}
+{% load i18n %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
 {% block head %}Welcome {{ user }} {% endblock %}}
 
 {% block content %}
     <h1> Hi I am {{ user }} </h1>
     <br />
-    <a href="/loggedin/">Home</a>
+    <a href="/user_home/">Home</a>
     <a href="/logout/"> Logout</a>
 {% endblock %}

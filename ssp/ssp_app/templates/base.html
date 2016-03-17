@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
+    {% load bootstrap3 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
     <meta charset="UTF-8">
     <title>S - S - P |
     {% block title %}{% endblock %}</title>
 </head>
     <body>
-        <h3>{% block head %}{% endblock %}</h3>
+        <h4>{% block head %}{% endblock %}</h4>
         {% block content %} {% endblock %}
     </body>
 </html>
